@@ -1,10 +1,13 @@
 import digitalocean
-api = "SecretKeyHere"
+api = input("Please enter API key")
+
+print("The default droplet region is NYC3")
+print("The default size is 512mb")
 
 drop = digitalocean.Droplet(
     token=api,
     name=input('Please enter a name for your droplet'),
-    region='nyc3',
+    region='nyc3,
     image=input('Please enter a image name'),
     size='512mb',
     backups='false'
